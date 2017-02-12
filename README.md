@@ -40,28 +40,28 @@ This project need the conda environment:
 4. The training data was collected through beta simulator which is provided in the course. The data I collected included center lane driving as a main driving hehavior, as well as recovering from the left and  the right to consider recovery behavior. Also I used image flipping to introduce more balanced driving habit. 
 
 5. The model architecture could be seen below, 
-![alt text][image1]
+  ![alt text][image1]
 
 ### Training Strategy
 
 1. Firstly I collected four to five normal driving laps using beta simulator, to collect both center camera images as well as left and right camera images. Here is an example of image of center lane driving. 
 
-![alt text][image2]
+  ![alt text][image2]
 
 2. I then recorded te vechile recovering from the left and right sides of the road back to center so that the vehicle could learn to how to recover from off side of the road. It is important as otherwise the car will have no clue what to do once getting close or off the road. 
 
-![alt text][image3]
+  ![alt text][image3]
 
 3. I also used flipping images when having non zero steering angle and adjust 0.08 degree on those left and right images, which also help the car to learn to adjust itself to the center of the road. The example of flipping images are below:
 
-![alt text][image4]
-![alt text][image5]
+  ![alt text][image4]
+  ![alt text][image5]
 
 4. I separate the datasets into training and validation set with 0.8 vs 0.2. I did not leave for testing set because we will test the vehicle on the simulator automonous mode. 
 
 5. Then I shuffle the dataset every epoch to ensure the model does not take advantage of the time series behavior. Also I applied dropout rate 0.4 to avoid the overfitting. 
 
-6. Generator has been utilized to help memory contraints and gen_batches function was defined for the generator. 
+6. Keras generator has been utilized to help memory contraints and gen_batches function was defined for the generator. 
 
 
 
