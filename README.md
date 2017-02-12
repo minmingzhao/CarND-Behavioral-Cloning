@@ -19,8 +19,8 @@ The repository contains:
 [image1]: ./examples/model_summary.png "Model Visualization"
 [image2]: ./examples/center.png "Example Center image"
 [image3]: ./examples/recover.png "Recover from off side"
-[image4]: ./examples/beforeflip.png
-[image5]: ./examples/afterflip.png
+[image4]: ./examples/beforeflip.jpg
+[image5]: ./examples/afterflip.jpg
 
 ### Dependencies
 This project need the conda environment:
